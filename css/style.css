@@ -1,0 +1,251 @@
+/* Variáveis de Cores para Hierarquia Visual Sem Template Pronto */
+:root {
+    --bg-primary: #f8f9fa;
+    --bg-surface: #ffffff;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --accent-color: #0066cc;
+    --correct-color: #28a745;
+    --border-color: #dee2e6;
+    --transition-speed: 0.3s;
+}
+
+/* Estado do Modo Escuro */
+body.dark-mode {
+    --bg-primary: #121212;
+    --bg-surface: #1e1e1e;
+    --text-main: #f8f9fa;
+    --text-muted: #a0a0a0;
+    --accent-color: #4dabf7;
+    --border-color: #333333;
+}
+
+/* Resets Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Flexbox no Cabeçalho */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background-color: var(--bg-surface);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.header-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Barra de Pesquisa */
+.search-container {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-container input {
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background: var(--bg-surface);
+    color: var(--text-main);
+}
+
+.search-container button {
+    padding: 0.5rem;
+    background: var(--bg-primary);
+    border: none;
+    cursor: pointer;
+}
+
+/* Botão de Acessibilidade com Hover Suave (Rubrica B) */
+.accessibility-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.accessibility-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Estrutura do Artigo */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.article-lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.reading-time {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+/* Flexbox na Seção Multimídia */
+.media-container {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.fake-video-placeholder {
+    flex: 1;
+    background: linear-gradient(135deg, #333, #555);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 180px;
+}
+
+.context-text {
+    flex: 1;
+}
+
+/* Estilização do Formulário/Quiz */
+.quiz-section {
+    background-color: var(--bg-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-primary);
+    padding: 1rem;
+    margin: 0.75rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+
+.quiz-option:hover {
+    background: var(--border-color);
+}
+
+#submit-quiz-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--correct-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Classes Utilitárias do JS */
+.hidden {
+    display: none;
+}
+
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.result-box.success {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.result-box.error {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+/* Rodapé */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* 📱 Media Queries para Responsividade Perfeita (Rubrica B - Celulares) */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .header-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .search-container {
+        width: 100%;
+    }
+    
+    .search-container input {
+        width: 100%;
+    }
+    
+    .media-container {
+        flex-direction: column;
+    }
+    
+    .article-title {
+        font-size: 1.8rem;
+    }
+}
