@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal EcoDigital | IA e Cidadania</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+        <div class="logo">Eco<span>Digital</span></div>
+        <div class="header-actions">
+            <!-- Barra de Pesquisa solicitada -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Pesquisar no portal...">
+                <button id="search-btn">🔍</button>
+            </div>
+            <!-- Botão de Acessibilidade (JS) -->
+            <button id="theme-toggle" class="accessibility-btn" aria-label="Alternar modo escuro">🌓 Modo Escuro</button>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <article class="news-article">
+            <!-- Manchete Principal -->
+            <h1 class="article-title">A Era das Deepfakes: Como a Inteligência Artificial Desafia a Verdade na Sociedade Moderna</h1>
+            
+            <!-- Lead e Tempo de Leitura -->
+            <div class="article-meta">
+                <p class="article-lead">Mídias manipuladas por algoritmos avançados se espalham rapidamente, exigindo novos hábitos de cidadania digital e ferramentas de verificação comunitária.</p>
+                <span class="reading-time">⏱️ Tempo de leitura: 4 min</span>
+            </div>
+
+            <!-- Área Multimídia e Contextualização -->
+            <section class="multimedia-section">
+                <h2>Contextualização e Nova Temática</h2>
+                <div class="media-container">
+                    <!-- Placeholder visual simulando ferramenta de IA -->
+                    <div class="fake-video-placeholder">
+                        <p>🎥 [Simulador de Mídia Manipulada por IA]</p>
+                        <span>Fonte: Acervo Educacional EcoDigital 2026</span>
+                    </div>
+                    <div class="context-text">
+                        <p>O avanço das ferramentas generativas automatizou a criação de desinformação em massa. Rostos, vozes e cenários podem ser clonados em minutos, tornando o discernimento crítico a nossa principal linha de defesa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Desafio Técnico: Quiz Interativo contra Desinformação -->
+            <section class="quiz-section">
+                <h2>Desafio Interativo: Você sabe identificar uma Deepfake?</h2>
+                <p>Analise a afirmação abaixo e teste seus conhecimentos de cidadania digital.</p>
+                
+                <form id="quiz-form" onsubmit="return false;">
+                    <div class="quiz-question">
+                        <p><strong>Cenário:</strong> Você recebeu um vídeo de um candidato político confessando um crime grave um dia antes da eleição. A voz parece robótica e os olhos piscam de forma artificial. O que você faz?</p>
+                        
+                        <label class="quiz-option">
+                            <input type="radio" name="question1" value="incorrect_share">
+                            <span>Compartilho imediatamente para alertar meus amigos.</span>
+                        </label>
+                        
+                        <label class="quiz-option">
+                            <input type="radio" name="question1" value="incorrect_ignore">
+                            <span>Ignoro o vídeo e não comento com ninguém.</span>
+                        </label>
+                        
+                        <label class="quiz-option">
+                            <input type="radio" name="question1" value="correct">
+                            <span>Não compartilho e busco o fato em portais de checagem confiáveis.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="button" id="submit-quiz-btn">Verificar Resposta</button>
+                </form>
+                
+                <!-- Div oculta manipulada por JS -->
+                <div id="quiz-result" class="result-box hidden"></div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Portal EcoDigital. Desenvolvido para a Atividade de Recuperação de Educação Digital.</p>
+        <p>Hashtag do Projeto: <strong>#cidadaniadigital2026</strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
